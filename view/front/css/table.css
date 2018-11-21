@@ -1,0 +1,585 @@
+/* == Table == */
+.wojo.table {
+  width: 100%;
+  background: #FFFFFF;
+  margin: 0em;
+  border: 1px solid #dddddd;
+  box-shadow: none;
+  border-radius: 0;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0px;
+  color: #3D4051;
+}
+.wojo.table:first-child {
+  margin-top: 0em;
+}
+.wojo.table:last-child {
+  margin-bottom: 0em;
+}
+.wojo.table th,
+.wojo.table td {
+  -webkit-transition: background 0.1s ease, color 0.1s ease;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+.wojo.table thead {
+  box-shadow: none;
+}
+.wojo.table thead th {
+  cursor: auto;
+  background: #F9FAFB;
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 1em 0.750em;
+  vertical-align: inherit;
+  font-family: 'mavenProBold';
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: none;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+  border-left: none;
+}
+.wojo.table thead tr > th:first-child {
+  border-left: none;
+}
+.wojo.table thead tr:first-child > th:first-child {
+  border-radius: 0.188rem 0em 0em 0em;
+}
+.wojo.table thead tr:first-child > th:last-child {
+  border-radius: 0em 0.188rem 0em 0em;
+}
+.wojo.table thead tr:first-child > th:only-child {
+  border-radius: 0.188rem 0.188rem 0em 0em;
+}
+.wojo.table tfoot {
+  box-shadow: none;
+}
+.wojo.table tfoot th {
+  cursor: auto;
+  border-top: 1px solid #dddddd;
+  background: #F9FAFB;
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.750em 0.750em;
+  vertical-align: middle;
+  font-style: normal;
+  font-family: 'mavenProBold';
+  font-size: .813rem;
+  font-weight: 700;
+  text-transform: none;
+}
+.wojo.table tfoot tr > th:first-child {
+  border-left: none;
+}
+.wojo.table tfoot tr:first-child > th:first-child {
+  border-radius: 0em 0em 0em 0.188rem;
+}
+.wojo.table tfoot tr:first-child > th:last-child {
+  border-radius: 0em 0em 0.188rem 0em;
+}
+.wojo.table tfoot tr:first-child > th:only-child {
+  border-radius: 0em 0em 0.188rem 0.188rem;
+}
+.wojo.table tr td {
+  border-top: 3px solid rgba(0,0,0,0.05);
+}
+.wojo.table tr:first-child td {
+  border-top: none;
+}
+.wojo.table td {
+  padding: 0.750em 0.750em;
+  text-align: inherit;
+}
+.wojo.table > .icon {
+  vertical-align: baseline;
+}
+.wojo.table > .icon:only-child {
+  margin: 0em;
+}
+.wojo.table.segment {
+  padding: 0em;
+}
+.wojo.table.segment:after {
+  display: none;
+}
+.wojo.table.segment.stacked:after {
+  display: block;
+}
+/* == Image == */
+.wojo.table th .image,
+.wojo.table th .image img,
+.wojo.table td .image,
+.wojo.table td .image img {
+  max-width: none;
+}
+/* == Types == */
+.wojo.basic.table.dashed tr td {
+  border-top: 2px dashed rgba(34, 36, 38, 0.1);
+}
+.wojo.basic.table.dashed {
+  border-bottom: 2px dashed rgba(34, 36, 38, 0.1);
+  border-radius: 0
+}
+.wojo.structured.table {
+  border-collapse: collapse;
+}
+.wojo.structured.table thead th {
+  border-left: none;
+  border-right: none;
+}
+.wojo.structured.sorting.table thead th {
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+.wojo.structured.basic.table th {
+  border-left: none;
+  border-right: none;
+}
+.wojo.structured.celled.table tr th,
+.wojo.structured.celled.table tr td {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+  border-right: 1px solid rgba(34, 36, 38, 0.1);
+}
+/* == Definition == */
+.wojo.definition.table {
+  border: 0
+}
+.wojo.definition.table thead th {
+  background: #fff;
+}
+.wojo.definition.table thead:not(.full-width) th:first-child {
+  pointer-events: none;
+  background: transparent;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+.wojo.definition.table tfoot:not(.full-width) th:first-child {
+  pointer-events: none;
+  background: transparent;
+  font-weight: rgba(0, 0, 0, 0.4);
+  color: normal;
+  box-shadow: 1px 1px 0px 1px #FFFFFF;
+}
+.wojo.celled.definition.table thead:not(.full-width) th:first-child {
+  box-shadow: 0px -1px 0px 1px #FFFFFF;
+}
+.wojo.celled.definition.table tfoot:not(.full-width) th:first-child {
+  box-shadow: 0px 1px 0px 1px #FFFFFF;
+}
+.wojo.definition.table tr td:first-child {
+  font-family: 'mavenProBold';
+  color: rgba(0, 0, 0, 0.95);
+  font-size: 0.688rem;
+  text-align: center;
+}
+.wojo.definition.table thead:not(.full-width) th:nth-child(2) {
+  border-left: 1px solid #dddddd;
+}
+.wojo.definition.table tfoot:not(.full-width) th:nth-child(2) {
+  border-left: 1px solid #dddddd;
+}
+.wojo.definition.table td:nth-child(2) {
+  border-left: 1px solid #dddddd;
+}
+/* == Collapsing == */
+.wojo.table th.collapsing,
+.wojo.table td.collapsing {
+  width: 1px;
+  white-space: nowrap;
+}
+/* == Fixed == */
+.wojo.fixed.table {
+  table-layout: fixed;
+}
+.wojo.fixed.table th,
+.wojo.fixed.table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* == Striped == */
+.wojo.striped.table > tr:nth-child(2n),
+.wojo.striped.table tbody tr:nth-child(2n) {
+  background-color: #F5F5F5;
+}
+.wojo.rounded.table {
+  border-radius: 0.188rem;
+}
+/* == Grid Based == */
+.wojo.one.column.table td {
+  width: 100%;
+}
+.wojo.two.column.table td {
+  width: 50%;
+}
+.wojo.three.column.table td {
+  width: 33.33333333%;
+}
+.wojo.four.column.table td {
+  width: 25%;
+}
+.wojo.five.column.table td {
+  width: 20%;
+}
+.wojo.six.column.table td {
+  width: 16.66666667%;
+}
+.wojo.seven.column.table td {
+  width: 14.28571429%;
+}
+.wojo.eight.column.table td {
+  width: 12.5%;
+}
+.wojo.nine.column.table td {
+  width: 11.11111111%;
+}
+.wojo.ten.column.table td {
+  width: 10%;
+}
+.wojo.eleven.column.table td {
+  width: 9.09090909%;
+}
+.wojo.twelve.column.table td {
+  width: 8.33333333%;
+}
+.wojo.thirteen.column.table td {
+  width: 7.69230769%;
+}
+.wojo.fourteen.column.table td {
+  width: 7.14285714%;
+}
+.wojo.fifteen.column.table td {
+  width: 6.66666667%;
+}
+.wojo.sixteen.column.table td {
+  width: 6.25%;
+}
+/* Column Width */
+.wojo.table th.one.wide,
+.wojo.table td.one.wide {
+  width: 6.25%;
+}
+.wojo.table th.two.wide,
+.wojo.table td.two.wide {
+  width: 12.5%;
+}
+.wojo.table th.three.wide,
+.wojo.table td.three.wide {
+  width: 18.75%;
+}
+.wojo.table th.four.wide,
+.wojo.table td.four.wide {
+  width: 25%;
+}
+.wojo.table th.five.wide,
+.wojo.table td.five.wide {
+  width: 31.25%;
+}
+.wojo.table th.six.wide,
+.wojo.table td.six.wide {
+  width: 37.5%;
+}
+.wojo.table th.seven.wide,
+.wojo.table td.seven.wide {
+  width: 43.75%;
+}
+.wojo.table th.eight.wide,
+.wojo.table td.eight.wide {
+  width: 50%;
+}
+.wojo.table th.nine.wide,
+.wojo.table td.nine.wide {
+  width: 56.25%;
+}
+.wojo.table th.ten.wide,
+.wojo.table td.ten.wide {
+  width: 62.5%;
+}
+.wojo.table th.eleven.wide,
+.wojo.table td.eleven.wide {
+  width: 68.75%;
+}
+.wojo.table th.twelve.wide,
+.wojo.table td.twelve.wide {
+  width: 75%;
+}
+.wojo.table th.thirteen.wide,
+.wojo.table td.thirteen.wide {
+  width: 81.25%;
+}
+.wojo.table th.fourteen.wide,
+.wojo.table td.fourteen.wide {
+  width: 87.5%;
+}
+.wojo.table th.fifteen.wide,
+.wojo.table td.fifteen.wide {
+  width: 93.75%;
+}
+.wojo.table th.sixteen.wide,
+.wojo.table td.sixteen.wide {
+  width: 100%;
+}
+/* == Text Alignment == */
+.wojo.table[class*="left aligned"],
+.wojo.table [class*="left aligned"] {
+  text-align: left;
+}
+.wojo.table[class*="center aligned"],
+.wojo.table [class*="center aligned"] {
+  text-align: center;
+}
+.wojo.table[class*="right aligned"],
+.wojo.table [class*="right aligned"] {
+  text-align: right;
+}
+.wojo.table[class*="top aligned"],
+.wojo.table [class*="top aligned"] {
+  vertical-align: top;
+}
+.wojo.table[class*="middle aligned"],
+.wojo.table [class*="middle aligned"] {
+  vertical-align: middle;
+}
+.wojo.table[class*="bottom aligned"],
+.wojo.table [class*="bottom aligned"] {
+  vertical-align: bottom;
+}
+/* == Sortable == */
+.wojo.sorting.table thead th {
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.87);
+}
+.wojo.sorting.table thead th:first-child {
+  border-left: none;
+}
+.wojo.sorting.table thead th.sorted,
+.wojo.sorting.table thead th.sorted:hover {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.wojo.sorting.table thead th:not(.disabled):after {
+  display: inline-block;
+  width: 1em;
+  opacity: 0.2;
+  margin: 0 0 0 .5em;
+  font-family: "WojoIcons";
+  content: '\e915';
+  font-style: normal;
+  font-weight: 400;
+  font-size: .750rem;
+  text-decoration: inherit;
+}
+.wojo.sorting.table thead th.asc:after {
+  content: '\e145';
+}
+.wojo.sorting.table thead th.desc:after {
+  content: '\e142';
+}
+.wojo.sorting.table th.disabled:after {
+  content: '';
+}
+.wojo.sorting.table th.disabled:hover {
+  cursor: auto;
+  color: rgba(0, 0, 0, 0.95);
+}
+.wojo.sorting.table thead th:hover {
+  color: #33BFC1;
+}
+.wojo.sorting.table thead th.sorted {
+  background-color: #F5F5F5;
+  color: rgba(0, 0, 0, 0.95);
+}
+.wojo.sorting.table thead th.sorted:after {
+  display: inline-block;
+}
+.wojo.sorting.table thead th.sorted:hover {
+  background-color: #F5F5F5;
+  color: rgba(0, 0, 0, 0.95);
+}
+.wojo.table i.icon.handle {
+  cursor: pointer;
+}
+.wojo.table tr.sorting-row {
+  background-color: #F7F7F7;
+}
+.wojo.collapsing.table {
+  width: auto;
+}
+/* == Basic == */
+.wojo.basic.table {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.wojo.basic.table thead,
+.wojo.basic.table tfoot {
+  box-shadow: none;
+}
+.wojo.basic.table th {
+  background: transparent;
+  border-left: none;
+  text-transform: uppercase;
+  font-size: 0.813rem;
+}
+.wojo.basic.table tr td {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #7F929C;
+}
+.wojo.basic.table thead tr:first-child > th:last-child,
+.wojo.table thead tr:first-child > th:first-child {
+  border-radius: 0;
+}
+.wojo.basic.striped.table tbody tr:nth-child(2n) {
+  background-color: #F9F9F9;
+}
+/* Very Basic */
+.wojo[class*="very basic"].table {
+  border: none;
+}
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) th,
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) td {
+  padding: '';
+}
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) th:first-child,
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) td:first-child {
+  padding-left: 0em;
+}
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) th:last-child,
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) td:last-child {
+  padding-right: 0em;
+}
+.wojo[class*="very basic"].table:not(.sorting):not(.striped) thead tr:first-child th {
+  padding-top: 0em;
+}
+.wojo.very.basic.table tr td {
+  border-top: 0 solid rgba(34, 36, 38, 0.1);
+}
+/* == Celled == */
+.wojo.celled.table tr th,
+.wojo.celled.table tr td {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+}
+.wojo.celled.table tr th:first-child,
+.wojo.celled.table tr td:first-child {
+  border-left: none;
+}
+/* == Padded == */
+.wojo.padded.table th {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.wojo.padded.table th,
+.wojo.padded.table td {
+  padding: 1em 1em;
+}
+.wojo[class*="very padded"].table th {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.wojo[class*="very padded"].table td {
+  padding: 1.5em 1.5em;
+}
+/* == Compact == */
+.wojo.compact.table th {
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+.wojo.compact.table td {
+  padding: 0.5em 0.7em;
+}
+.wojo[class*="very compact"].table th {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.wojo[class*="very compact"].table td {
+  padding: 0.4em 0.6em;
+}
+.wojo.compact.fitted.table td {
+  padding: 0.2em 0.4em;
+}
+/* == Text Alignment == */
+.wojo.table[class*="left aligned"],
+.wojo.table [class*="left aligned"] {
+  text-align: left;
+}
+.wojo.table[class*="center aligned"],
+.wojo.table [class*="center aligned"] {
+  text-align: center;
+}
+.wojo.table[class*="right aligned"],
+.wojo.table [class*="right aligned"] {
+  text-align: right;
+}
+.wojo.table[class*="top aligned"],
+.wojo.table [class*="top aligned"] {
+  vertical-align: top;
+}
+.wojo.table[class*="middle aligned"],
+.wojo.table [class*="middle aligned"] {
+  vertical-align: middle;
+}
+.wojo.table[class*="bottom aligned"],
+.wojo.table [class*="bottom aligned"] {
+  vertical-align: bottom;
+}
+/* == Sizes == */
+.wojo.small.table {
+  font-size: 0.9em;
+}
+.wojo.table {
+  font-size: 1em;
+}
+.wojo.large.table {
+  font-size: 1.1em;
+}
+/* == Responsive == */
+table.bt thead {
+  display: none;
+}
+table.bt tbody td {
+  border: none;
+  display: block;
+  vertical-align: middle;
+  text-align: left;
+}
+table.bt tbody td:before {
+  content: attr(data-th) ": ";
+  font-family: 'mavenProBold';
+  font-size: .875em;
+  width: 8em;
+  display: inline-block;
+  color:rgba(34, 36, 38, 1)
+}
+table.bt tbody td.bt-hide {
+  display: none;
+}
+table.bt tbody td .bt-content {
+  vertical-align: middle;
+  display: inline-block;
+}
+.bt-wrapper.active {
+  max-height: 610px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media screen and (max-width:769px) {
+.wojo.table tr td {
+  border-top: 1px solid rgba(34, 36, 38, 0);
+}
+.wojo.basic.table tbody tr {
+  box-shadow: 0 2px 0 0 #B4C1C7;
+}
+.wojo.table th.collapsing,
+.wojo.table td.collapsing {
+  width: auto;
+  white-space: normal;
+}
+.wojo.table[class*="center aligned"],
+.wojo.table [class*="center aligned"],
+.wojo.table[class*="tight aligned"],
+.wojo.table [class*="tight aligned"] {
+  text-align: left;
+}
+}

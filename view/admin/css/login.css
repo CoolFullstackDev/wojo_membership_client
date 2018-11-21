@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'mavenProRegular';
+  src: url('../fonts/MavenProRegular.woff') format('woff'), url('../fonts/MavenProRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+@font-face {
+  font-family: 'mavenProDemi';
+  src: url('../fonts/MavenProDemi.woff') format('woff'), url('../fonts/MavenProDemi.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+@font-face {
+  font-family: 'mavenProBold';
+  src: url('../fonts/MavenProBold.woff') format('woff'), url('../fonts/MavenProBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+}
+html {
+  display: table;
+  margin: auto;
+}
+body {
+  font-family: "mavenProRegular", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  color: #666666;
+  background-color: #E9E9E9;
+  line-height: 1.5em;
+  display: table-cell;
+  vertical-align: middle;
+}
+a,
+a.inverted,
+a.white {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+  outline: none
+}
+#container {
+  max-width: 460px;
+  position: relative;
+  width: 100%;
+}
+#avatar {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 80px;
+  border-radius: 500em;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+.card {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: .5em;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  padding: 50px 0 40px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.card .title {
+  font-family: "mavenProRegular", sans-serif;
+  position: relative;
+  z-index: 1;
+  border-left: 5px solid #33BFC1;
+  margin: 0 0 35px;
+  padding: 10px 0 10px 50px;
+  color: #33BFC1;
+  font-size: 1em;
+}
+.card .input-container {
+  position: relative;
+  margin: 0 60px 50px;
+  min-width: 330px
+}
+.card .input-container input {
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background: none;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  color: #212121;
+  font-size: 24px;
+  font-family: "mavenProRegular";
+}
+.card .input-container input:focus ~ label {
+  color: #9d9d9d;
+  -webkit-transform: translate(-12%, -60%) scale(0.75);
+  transform: translate(-12%, -60%) scale(0.75);
+}
+.card .input-container input:focus ~ .bar:before,
+.card .input-container input:focus ~ .bar:after {
+  width: 50%;
+}
+.card .input-container input:valid ~ label {
+ color: #9d9d9d;
+ -webkit-transform: translate(-12%, -60%) scale(0.75);
+ transform: translate(-12%, -60%) scale(0.75);
+}
+.card .input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #757575;
+  font-size: 1em;
+  font-family: "mavenProBold";
+  line-height: 60px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+}
+.card .input-container .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #757575;
+  width: 100%;
+  height: 1px;
+}
+.card .input-container.error input:valid ~ label {
+ color: #E2747E;
+}
+.card .input-container.error .bar {
+  background: #E2747E;
+}
+.card .input-container .bar:before,
+.card .input-container .bar:after {
+  content: '';
+  position: absolute;
+  background: #33BFC1;
+  width: 0;
+  height: 2px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+.card .input-container .bar:before {
+  left: 50%;
+}
+.card .input-container .bar:after {
+  right: 50%;
+}
+.card .button-container {
+  margin: 0 60px;
+  text-align: center;
+}
+.card .button-container button {
+  font-family: "mavenProBold";
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: 0;
+  width: 240px;
+  border: 2px solid #e3e3e3;
+  padding: 20px 0;
+  font-size: 24px;
+  line-height: 1;
+  color: #ddd;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.card .button-container button.alt {
+  width: 100%;
+}
+.card .button-container button:hover,
+.card .button-container button:active,
+.card .button-container button:focus {
+  border-color: #33BFC1;
+  color: #33BFC1;
+}
+.card .footer {
+  margin: 40px 0 0;
+  color: #d3d3d3;
+  font-size: 1em;
+  text-align: center;
+}
+.card .footer a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.card .footer a:hover {
+  color: #bababa;
+}
+footer {
+  text-align: center;
+  margin-top: 2em;
+  font-size: .875em;
+}
+.wojo.negative.message {
+  position: relative;
+  margin-top: 1em;
+  margin-right: 0em;
+  margin-left: 0em;
+  height: auto;
+  padding: 1em;
+  background: rgba(244, 67, 54, 0.8);
+  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+  color: #FFFFFF;
+}
+.wojo.negative.message i.icon {
+  display: none
+}
+.wojo.negative .header {
+  margin: 0em;
+  font-size: 1em;
+  font-family: 'mavenProBold';
+}
+.wojo.negative ul.list {
+  list-style-position: inside;
+  margin: 0em;
+  padding: 0em;
+  font-size: .875em;
+  font-family: 'mavenProRegular';
+}
+.wojo.message ul.list li {
+  position: relative;
+  list-style-type: none;
+  margin: 0em;
+  margin-left: .5em;
+  padding: 0em;
+}
+/* == Loading == */
+button.loading {
+  position: relative;
+  cursor: default;
+  color: transparent;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0s linear, opacity 0.1s ease;
+  transition: all 0s linear, opacity 0.1s ease;
+}
+button.loading:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 500rem;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgba(0, 0, 0, 0.15);
+}
+button.loading:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: -.750em;
+  margin-top: -.750em;
+  -webkit-animation: button-spin 0.6s linear;
+  animation: button-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #ffffff transparent transparent;
+  border-style: solid;
+  border-width: 4px;
+  box-shadow: 0px 0px 0px 1px transparent;
+}
+@-webkit-keyframes button-spin {
+ from {
+ -webkit-transform: rotate(0deg);
+ transform: rotate(0deg);
+}
+ to {
+ -webkit-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+}
+@keyframes button-spin {
+ from {
+ -webkit-transform: rotate(0deg);
+ transform: rotate(0deg);
+}
+ to {
+ -webkit-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+}
+input:-webkit-autofill {
+ box-shadow: 0 0 0px 30px #fff inset;
+ background-color: #fff;
+ -webkit-text-color: #fff;
+ color:#fff;
+}
+input:-webkit-autofill:focus {
+ -webkit-text-color: #fff;
+ color:#fff;
+}
+::-webkit-input-placeholder {
+ color:#edecec;
+}

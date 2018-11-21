@@ -1,0 +1,366 @@
+/* == Messge == */
+.wojo.message {
+  position: relative;
+  min-height: 1em;
+  margin: 1em 0em;
+  background-color: #F9F9F9;
+  padding: 1em 1.5em;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
+  border-radius: 0.125rem;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+.wojo.message:first-child {
+  margin-top: 0em;
+}
+.wojo.message:last-child {
+  margin-bottom: 0em;
+}
+/* == Content == */
+.wojo.message .header {
+  display: block;
+  font-family: 'mavenProDemi';
+}
+.wojo.message .header:not(.wojo) {
+  font-size: 1.125rem;
+}
+.wojo.message p {
+  opacity: 0.85;
+  margin: 0.75em 0em;
+}
+.wojo.message p:first-child {
+  margin-top: 0em;
+}
+.wojo.message p:last-child {
+  margin-bottom: 0em;
+}
+.wojo.message .header + p {
+  margin-top: .5em;
+}
+/* == List == */
+.wojo.message ul.list {
+  text-align: left;
+  padding: 0em;
+  opacity: 0.85;
+  list-style-position: inside;
+  margin: 0.5em 0em 0em;
+}
+.wojo.message ul.list:first-child {
+  margin-top: 0em;
+}
+.wojo.message ul.list:last-child {
+  margin-bottom: 0em;
+}
+.wojo.message ul.list li {
+  position: relative;
+  list-style-type: none;
+  margin: 0em 0em 0.3em 1em;
+  padding: 0em;
+}
+.wojo.message ul.list li:before {
+  position: absolute;
+  content: '•';
+  left: -1em;
+  height: 100%;
+  vertical-align: baseline;
+}
+.wojo.message ul.list li:last-child {
+  margin-bottom: 0em;
+}
+.wojo.message > .icon {
+  margin-right: 0.6em;
+}
+.wojo.message > .close.icon {
+  cursor: pointer;
+  position: absolute;
+  margin: 0em;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+.wojo.message > .close.icon:hover {
+  opacity: 1;
+}
+.wojo.message > :first-child {
+  margin-top: 0em;
+}
+.wojo.message > :last-child {
+  margin-bottom: 0em;
+}
+/* == Notices == */
+#wojo-overlay {
+  position: fixed;
+  width: auto;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translateX(-50%);
+  z-index: 80000;
+}
+.wojo.notice {
+  max-width: 500px;
+  min-width: 300px;
+  position:relative;
+}
+.wojo.notice .content {
+  padding: 1em;
+  color: #fff;
+}
+.wojo.notice span {
+  font-size: 1em;
+  display: block;
+  font-family: 'mavenProBold';
+}
+.wojo.notice p {
+  margin-top: 0;
+}
+.wojo.notice a.notice-close {
+  opacity: 0;
+}
+.wojo.notice:hover a.notice-close {
+  opacity: 1;
+}
+.wojo.notice i.icon.close {
+  position: absolute;
+  right: .5em;
+  top: 0em;
+  color: rgba(255,255,255,0.8)
+}
+.wojo.notice.success {
+  background-color: rgba(63,197,157,0.90);
+  box-shadow: 0 0 5px rgba(63,197,157, 0.5);
+}
+.wojo.notice.info {
+  background-color: rgba(65,199,249,0.90);
+  box-shadow: 0 0 5px rgba(65,199,249, 0.5);
+}
+.wojo.notice.alert {
+  background-color: rgba(246,190,87,0.90);
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+.wojo.notice.error {
+  background-color: rgba(227,115,125,0.90);
+  box-shadow: 0 0 5px rgba(227,115,125, 0.5);
+}
+/* == Notes == */
+.wojo.note {
+  font-size: 0.750rem;
+  padding: .25em .750em;
+  display: inline-block;
+  border-radius: 0.125em;
+  font-family: 'mavenProDemi';
+  color: #fff;
+  line-height: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+.wojo.note a {
+  color: #454545
+}
+.wojo.note a:hover {
+  color: #fff
+}
+.wojo.note.success {
+  background-color: #4CBE83;
+}
+.wojo.note.info {
+  background-color: #6CC8D5;
+}
+.wojo.note.alert {
+  background-color: #EDA93C;
+}
+.wojo.note.error {
+  background-color: #E57C67;
+}
+.wojo.notes.content {
+  font-family: 'Handlee', 'mavenProRegular';
+  position: relative;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, transparent 1px) 0 36px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, transparent 1px) 0 36px;
+  background: linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, transparent 1px) 0 36px;
+  background-size: 100% 36px;
+  font-size: 1.5rem;
+  line-height: 2.250rem;
+  margin: 0;
+  min-height: 628px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.wojo.notes.content::before,
+.wojo.notes.content::after {
+  content: "";
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  height: 100%;
+}
+.wojo.notes.content::after {
+  left: 19px;
+}
+/* == Coupling == */
+.wojo.dropdown .menu > .message {
+  margin: 0px -1px;
+}
+/* == States == */
+.wojo.visible.visible.visible.visible.message {
+  display: block;
+}
+.wojo.icon.visible.visible.visible.visible.message {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wojo.hidden.hidden.hidden.hidden.message {
+  display: none;
+}
+/* == Variations == */
+.wojo.compact.message {
+  display: inline-block;
+  margin: 0
+}
+.wojo.attached.message {
+  margin-bottom: -1px;
+  border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+  box-shadow: 0em 0em 0em 1px #dddddd inset;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.wojo.attached + .wojo.attached.message:not(.top):not(.bottom) {
+  margin-top: -1px;
+  border-radius: 0em;
+}
+.wojo.bottom.attached.message {
+  margin-top: -1px;
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+  box-shadow: 0em 0em 0em 1px #dddddd inset, 0px 1px 2px 0 #dddddd;
+}
+.wojo.bottom.attached.message:not(:last-child) {
+  margin-bottom: 1em;
+}
+.wojo.attached.icon.message {
+  width: auto;
+}
+.wojo.icon.message {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wojo.icon.message > .icon:not(.close),
+.wojo.icon.message > img {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+.wojo.icon.message > .content {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  vertical-align: middle;
+}
+.wojo.icon.message .icon:not(.close) + .content,
+.wojo.icon.message > img + .content {
+  padding-left: 0rem;
+}
+.wojo.icon.message > img {
+  width: auto;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: .188rem;
+}
+.wojo.icon.message .circular.icon {
+  width: 1em;
+}
+.wojo.floating.message {
+  box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+}
+/* == Colors == */
+.wojo.black.message {
+  background-color: #363C4D;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+}
+.wojo.success.message,
+.wojo.positive.message {
+  background: rgba(76, 175, 80, 0.8);
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  color: #fff;
+}
+.wojo.error.message,
+.wojo.negative.message {
+  background: rgba(244, 67, 54, 0.8);
+  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+  color: #fff;
+}
+.wojo.info.message {
+  background: rgba(33, 150, 243, 0.8);
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  color: #fff;
+}
+.wojo.alert.message {
+  background: rgba(255, 152, 0, 0.8);
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+  color: #fff
+}
+.wojo.basic.message {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+.wojo.basic.message .content {
+  padding: 0;
+}
+.wojo.basic.message .header {
+  font-size: 2rem;
+  font-family: 'mavenProRegular';
+}
+/* == Sizes == */
+.wojo.tiny.message {
+  font-size: 0.813rem;
+}
+.wojo.small.message {
+  font-size: 0.875rem;
+  padding: 0.750em;
+  line-height: 1em
+}
+.wojo.small.icon.message > .icon:not(.close) {
+  font-size: 1rem;
+}
+.wojo.message {
+  font-size: 1em;
+}
+.wojo.large.message {
+  font-size: 1.125rem;
+}
+.wojo.large.message > .icon:not(.close),
+.wojo.large.message > img {
+  font-size: 4rem;
+}
+.wojo.huge.message {
+  font-size: 1.42857143em;
+}
+.wojo.massive.message {
+  font-size: 2rem;
+}

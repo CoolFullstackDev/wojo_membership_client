@@ -1,0 +1,340 @@
+@font-face {
+  font-family: 'mavenProRegular';
+  src: url('../fonts/MavenProRegular.woff') format('woff'), url('../fonts/MavenProRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+@font-face {
+  font-family: 'mavenProDemi';
+  src: url('../fonts/MavenProDemi.woff') format('woff'), url('../fonts/MavenProDemi.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+@font-face {
+  font-family: 'mavenProBold';
+  src: url('../fonts/MavenProBold.woff') format('woff'), url('../fonts/MavenProBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+html,
+body {
+  font-size: 16px;
+}
+body {
+  font-family: "mavenProRegular", sans-serif;
+  color: #212F38;
+  background-color: #3098BF;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+b,
+strong {
+  font-family: 'mavenProBold';
+}
+a,
+a.inverted,
+a.white {
+  cursor: pointer;
+  color: #33BFC1;
+  text-decoration: none;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+  outline: none
+}
+a:hover,
+a.hover,
+a:focus {
+  color: #212F38;
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -o-transition: all .35s ease;
+  transition: all .55s ease;
+  outline: none;
+  text-decoration: none
+}
+a.inverted,
+p.inverted {
+  color: #50646F;
+}
+a.white {
+  color: #fff;
+}
+a.inverted:hover,
+a.inverted.hover,
+a.inverted:focus {
+  color: #161F27;
+}
+a.white:hover,
+a.white.hover,
+a.white:focus {
+  color: rgba(0,0,0,0.6);
+}
+h1 {
+  min-height: 1rem;
+  line-height: 3.5rem;
+  font-size: 3rem;
+  font-family: 'mavenProRegular';
+  font-weight: 300
+}
+h2 {
+  line-height: 2rem;
+  font-size: 2rem;
+  font-family: 'mavenProRegular';
+  font-weight: 400
+}
+h3 {
+  line-height: 1.50rem;
+  font-size: 1.50rem;
+  font-family: 'mavenProDemi';
+  font-weight: 500
+}
+h4 {
+  line-height: 1.375rem;
+  font-size: .875rem;
+  font-family: 'mavenProBold';
+  text-transform: uppercase;
+}
+h5 {
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: 'mavenProBold';
+  font-weight: 700
+}
+#wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  position: relative;
+  border-radius: .5em;
+  margin: 0 auto;
+  padding: 2em 0;
+  min-height: 700px;
+}
+aside {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+  background-color: #212F38;
+  width: 250px;
+  border-radius: .5em 0 0 .5em;
+  position: relative;
+}
+main {
+  -webkit-flex: 1 1 0px;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+  min-width: 0;
+  background-color: #ECF0F1;
+  border-radius: 0 .5em .5em 0;
+  padding: 3em;
+  padding-top: 1em;
+  position: relative;
+}
+.logo {
+  padding-top: 2em;
+  text-align: center;
+  display: block;
+  margin-bottom: 4em;
+}
+.logo img {
+  height: 40px;
+}
+nav ul,
+nav ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  padding-left: 2em;
+}
+nav ul li a {
+  display: block;
+  padding: .750em 0;
+}
+nav ul li a.active {
+  color: #33BFC1;
+}
+nav ul li a img {
+  width: 22px;
+  height: 22px;
+}
+nav ul li a span {
+  display: inline-block;
+  color: #fff;
+  font-family: 'mavenProDemi';
+  padding-left: .5em;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+nav ul li a span:hover {
+  color: #7F929C;
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -o-transition: all .35s ease;
+  transition: all .55s ease;
+}
+nav ul li.active {
+  box-shadow: inset 2px 0 0 0 #33BFC1;
+  background-color: #161F27;
+}
+nav ul li ul {
+  display: none;
+}
+nav ul li.active ul {
+  display: block;
+}
+nav ul li ul li {
+  padding-left: 0;
+}
+nav ul li ul li a {
+  color: #7F929C;
+  font-size: .875em;
+}
+nav ul li ul li a:hover {
+  color: #ECF0F1;
+}
+#mnav {
+  width: 24px;
+  height: 24px;
+  background-color: #ECF0F1;
+  color: #B4C1C7;
+  text-align: center;
+  border-radius: 2px;
+  position: relative;
+  left: -2em;
+}
+#mnav .icon:hover {
+  color: #212F38;
+}
+#mnav-alt {
+  display: none;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 1em;
+  top: 1.25em;
+  background-color: #000;
+  color: #B4C1C7;
+  text-align: center;
+  line-height: 2;
+  border-radius: 0.188em;
+}
+#utility {
+  background-color: #161F27;
+  padding: 2em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0 0 0 .5em;
+}
+footer {
+  font-size: .813em;
+  text-align: center;
+  color: #fff;
+}
+
+/* Tablet */
+@media screen and (min-width:40.625em) and (max-width:64em) {
+#wrapper {
+  border-radius: 0;
+  max-width: 100%;
+  padding-top: 0;
+}
+.container {
+  padding-top: 0
+}
+.menuwrap {
+  display: block;
+}
+aside,
+.main {
+  border-radius: 0;
+}
+aside {
+  width: 120px
+}
+nav ul li {
+  padding-left: 0;
+  margin-bottom: 1em;
+}
+nav ul li a {
+  text-align: center;
+}
+nav ul li a span {
+  display: none;
+}
+nav ul li a img {
+  width: 28px;
+  height: 28px;
+}
+}
+
+/* Mobile */
+@media screen and (max-width:48.063em) {
+.container {
+  padding-top: 0
+}
+aside {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+.main {
+  border-radius: 0;
+}
+.menuwrap,
+#mnav {
+  display: none;
+}
+#mnav-alt {
+  display: block;
+}
+.logo {
+  padding: 1em;
+  text-align: left;
+  display: block;
+  margin: 0
+}
+#utility {
+  display: none
+}
+nav ul li {
+  padding-left: 2em;
+}
+nav ul li a {
+  text-align: left;
+}
+nav ul li a span {
+  display: inline-block;
+}
+nav ul li a img {
+  width: 22px;
+  height: 22px;
+}
+}
+pre {
+  padding: 1.5em;
+}

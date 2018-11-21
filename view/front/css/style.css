@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'mavenProRegular';
+  src: url('../fonts/MavenProRegular.woff') format('woff'), url('../fonts/MavenProRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+@font-face {
+  font-family: 'mavenProDemi';
+  src: url('../fonts/MavenProDemi.woff') format('woff'), url('../fonts/MavenProDemi.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+@font-face {
+  font-family: 'mavenProBold';
+  src: url('../fonts/MavenProBold.woff') format('woff'), url('../fonts/MavenProBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+ unicode-range: U+0020-FB04;
+}
+html,
+body {
+  font-size: 16px;
+}
+body {
+  font-family: "mavenProRegular", sans-serif;
+  color: #50646F;
+  background-color: #20242F;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/mainbg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+b,
+strong {
+  font-family: 'mavenProBold';
+}
+a,
+a.inverted,
+a.white {
+  cursor: pointer;
+  color: #33BFC1;
+  text-decoration: none;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+  outline: none
+}
+a:hover,
+a.hover,
+a:focus {
+  color: #212F38;
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -o-transition: all .35s ease;
+  transition: all .55s ease;
+  outline: none;
+  text-decoration: none
+}
+a.inverted,
+p.inverted {
+  color: #50646F;
+}
+a.white {
+  color: #fff;
+}
+a.inverted:hover,
+a.inverted.hover,
+a.inverted:focus {
+  color: #161F27;
+}
+a.white:hover,
+a.white.hover,
+a.white:focus {
+  color: rgba(0,0,0,0.6);
+}
+h1 {
+  min-height: 1rem;
+  line-height: 3.5rem;
+  font-size: 3rem;
+  font-family: 'mavenProRegular';
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: #fff;
+}
+h2 {
+  line-height: 2rem;
+  font-size: 2rem;
+  font-family: 'mavenProRegular';
+  font-weight: 400
+}
+h3 {
+  line-height: 1.50rem;
+  font-size: 1.50rem;
+  font-family: 'mavenProDemi';
+  font-weight: 500
+}
+h4 {
+  line-height: 1.375rem;
+  font-size: .875rem;
+  font-family: 'mavenProBold';
+  text-transform: uppercase;
+}
+h5 {
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: 'mavenProBold';
+  font-weight: 700
+}
+#logo {
+  text-align: center;
+  margin: 6em auto 5em auto;
+}
+#logo img {
+  height: 80px;
+}
+#login-wrap {
+  max-width: 480px;
+  position: relative;
+  margin: 0 auto;
+}
+.login-form {
+  background-color: #FFFFFF;
+  padding: 3em 2em;
+  border-radius: 0 0 0.375em 0.375em;
+}
+#tabs a,
+#tabs-alt a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 2em 0;
+  text-transform: uppercase;
+  font-family: 'mavenProBold';
+  width: 50%;
+}
+#tabs-alt a {
+  width: 25%;
+}
+#tabs a.active,
+#tabs-alt a.active {
+  background-color: #FFFFFF;
+  border-radius: .375em .375em 0 0;
+  padding: 2.5em 0;
+  color: #212121;
+}
+#tabs a.static,
+#tabs-alt a.static {
+  background-color: #20242F;
+  color: #fff;
+  border-radius: .375em .375em 0 0;
+  position: relative;
+  bottom: -1em;
+}
+#menu {
+  top: 2em;
+  position: fixed;
+  right: 2em;
+}
+#menu:hover .sub {
+  transition: opacity 1.6s;
+}
+#menu:hover .sub + .sub {
+  transition: opacity 1.2s;
+}
+#menu:hover .sub + .sub + .sub {
+  transition: opacity 0.8s;
+}
+#menu:hover .sub + .sub + .sub + .sub {
+  transition: opacity 0.4s;
+}
+#menu:hover .sub + .sub + .sub + .sub + .sub {
+  transition: opacity 0.1s;
+}
+.actionButton {
+  background-color: #D32F2F;
+  border-radius: 50%;
+  height: 3em;
+  position: relative;
+  width: 3em;
+  z-index: 1000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+.actionButton.display {
+  display: inherit;
+}
+.actionButton:before,
+.actionButton:after {
+  color: #FFF;
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  line-height: 3em;
+  font-family: 'WojoIcons';
+}
+.actionButton:before {
+  content: '\e10e';
+  opacity: 1;
+  transform: rotate3d(0, 0, 1, -180deg);
+  transition: content 0.4s, transform 0.4s, opacity 0.2s;
+}
+.actionButton:after {
+  content: '\e07b';
+  opacity: 0;
+  transform: rotate3d(0, 0, 1, -180deg);
+  transition: content 0.4s, transform 0.4s, opacity 0.4s;
+}
+.actionButton.open::before {
+  transform: rotate3d(0, 0, 1, 0deg);
+  opacity: 0;
+}
+.actionButton.open::after {
+  transform: rotate3d(0, 0, 1, 0deg);
+  opacity: 1;
+}
+.actionButton:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.14), 0 8px 16px rgba(0, 0, 0, 0.28);
+}
+.sub {
+  background-color: #2CBEBF;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  margin-top: .6em;
+  margin-left: .5em;
+  opacity: 0;
+  position: relative;
+  z-index: 1000;
+  display: block;
+  visibility: hidden
+}
+.sub.display {
+  opacity: 1;
+  visibility: visible
+}
+.sub:before {
+  height: 2em;
+  width: 2em;
+  font-family: 'WojoIcons';
+  position: absolute;
+  color: #FFF;
+  text-align: center;
+  line-height: 2em;
+}
+.sub.contact:before {
+  content: '\e089';
+}
+.sub.packages:before {
+  content: '\e01d';
+}
+.sub.dashboard:before {
+  content: '\e077';
+}
+.sub.register:before {
+  content: '\e0f2';
+}
+.sub.login:before {
+  content: '\e0c9';
+}
+.sub.logout:before {
+  content: '\e102';
+}
+.sub.news:before {
+  content: '\e0d9';
+}
+.sub.news {
+  background-color: #000;
+}
+.sub:hover {
+  background-color: #00acc1;
+}
+.avatar {
+  width: 5em;
+  border-radius: 500em;
+  background-color: rgba(0,0,0,0.35);
+}
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: .875em;
+  padding: 1.5em;
+}
+@media screen and (max-width:48.063em) {
+#tabs-alt a {
+  float: none;
+  width: 100%;
+}
+#tabs-alt a.static {
+  bottom: 0;
+}
+}

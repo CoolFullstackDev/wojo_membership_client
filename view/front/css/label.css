@@ -1,0 +1,782 @@
+/* == Label == */
+.wojo.label {
+  display: inline-block;
+  line-height: 1em;
+  vertical-align: middle;
+  margin: 0em 0.125em;
+  background-color: #DFE5E8;
+  background-image: none;
+  padding: 0.5em 0.750em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  font-family: 'mavenProDemi';
+  border: 0px solid transparent;
+  border-radius: 0.188rem;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+.wojo.label:first-child {
+  margin-left: 0em;
+}
+.wojo.label:last-child {
+  margin-right: 0em;
+}
+a.wojo.label {
+  cursor: pointer;
+}
+.wojo.label > a {
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.5;
+  -webkit-transition: 0.1s opacity ease;
+  transition: 0.1s opacity ease;
+}
+.wojo.label > a:hover {
+  opacity: 1;
+}
+.wojo.label > img {
+  width: auto;
+  vertical-align: middle;
+  height: 2em;
+}
+.wojo.label > .icon {
+  width: auto;
+  margin: 0em 0.75em 0em 0em;
+}
+.wojo.label.icon > .icon {
+  width: auto;
+  margin: 0;
+}
+/* == Detail == */
+.wojo.label > .detail {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'mavenProRegular';
+  margin-left: 1em;
+  opacity: 0.85;
+}
+.wojo.label > .detail .icon {
+  margin: 0em 0.25em 0em 0em;
+}
+/* == Removable label == */
+.wojo.label > .close.icon,
+.wojo.label > .delete.icon {
+  cursor: pointer;
+  margin-right: 0em;
+  margin-left: 0.5em;
+  font-size: 0.938em;
+  opacity: 0.5;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+.wojo.label > .delete.icon:hover {
+  opacity: 1;
+}
+/* == Group == */
+.wojo.labels > .label {
+  margin: 0em 0.5em 0.5em 0em;
+}
+/* == Coupling == */
+
+.wojo.header > .wojo.label {
+  margin-top: -0.250em;
+}
+.wojo.attached.segment > .wojo.top.left.attached.label,
+.wojo.bottom.attached.segment > .wojo.top.left.attached.label {
+  border-top-left-radius: 0;
+}
+.wojo.attached.segment > .wojo.top.right.attached.label,
+.wojo.bottom.attached.segment > .wojo.top.right.attached.label {
+  border-top-right-radius: 0;
+}
+.wojo.top.attached.segment > .wojo.bottom.left.attached.label {
+  border-bottom-left-radius: 0;
+}
+.wojo.top.attached.segment > .wojo.bottom.right.attached.label {
+  border-bottom-right-radius: 0;
+}
+.wojo.top.attached.label:first-child + :not(.attached) {
+  /*margin-top: 2rem;*/
+}
+.wojo.bottom.attached.label:first-child ~ :last-child:not(.attached) {
+  margin-top: 0em;
+  margin-bottom: 2rem;
+}
+/* == Types == */
+.wojo.image.label {
+  width: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  max-width: 9999px;
+  vertical-align: baseline;
+  text-transform: none;
+  background: #F5F5F5;
+  padding: 0.500em 0.750em 0.500em 0.5em;
+  border-radius: 0.188rem;
+  box-shadow: none;
+}
+.wojo.image.label img {
+  display: inline-block;
+  vertical-align: top;
+  height: 2em;
+  margin: -0.5em 0.5em -0.5em -0.5em;
+  border-radius: 0.188rem 0em 0em 0.188rem;
+}
+.wojo.image.label .detail {
+  background: rgba(0, 0, 0, 0.1);
+  margin: -0.5em -0.750em -0.5em 0.5em;
+  padding: 0.5em 0.750em;
+  border-radius: 0em 0.188rem 0.188rem 0em;
+}
+/* == Tag == */
+.wojo.tag.labels .label,
+.wojo.tag.label {
+  margin-left: 1em;
+  position: relative;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 0em 0.188rem 0.188rem 0em;
+  -webkit-transition: none;
+  transition: none;
+}
+.wojo.tag.labels .label:before,
+.wojo.tag.label:before {
+  position: absolute;
+  -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+  transform: translateY(-50%) translateX(50%) rotate(-45deg);
+  top: 50%;
+  right: 100%;
+  content: '';
+  background-color: inherit;
+  background-image: none;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transition: none;
+  transition: none;
+}
+.wojo.tag.labels .label:after,
+.wojo.tag.label:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -0.25em;
+  margin-top: -0.25em;
+  background-color: #FFFFFF;
+  width: 0.5em;
+  height: 0.5em;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 500rem;
+}
+/* == Corner Label == */
+.wojo.corner.label {
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  margin: 0em;
+  padding: 0em;
+  text-align: center;
+  border-color: #E6EDF8;
+  width: 4em;
+  height: 4em;
+  z-index: 1;
+  -webkit-transition: border-color 0.1s ease;
+  transition: border-color 0.1s ease;
+}
+.wojo.corner.label {
+  background-color: transparent;
+}
+.wojo.corner.label:after {
+  position: absolute;
+  content: "";
+  right: 0em;
+  top: 0em;
+  z-index: -1;
+  width: 0em;
+  height: 0em;
+  background-color: transparent;
+  border-top: 0em solid transparent;
+  border-right: 4em solid transparent;
+  border-bottom: 4em solid transparent;
+  border-left: 0em solid transparent;
+  border-right-color: inherit;
+  -webkit-transition: border-color 0.1s ease;
+  transition: border-color 0.1s ease;
+}
+.wojo.corner.label .icon {
+  cursor: default;
+  position: relative;
+  top: 0.64285714em;
+  left: 0.78571429em;
+  font-size: 1.14285714em;
+  margin: 0em;
+}
+.wojo.left.corner.label,
+.wojo.left.corner.label:after {
+  right: auto;
+  left: 0em;
+}
+.wojo.left.corner.label:after {
+  border-top: 4em solid transparent;
+  border-right: 4em solid transparent;
+  border-bottom: 0em solid transparent;
+  border-left: 0em solid transparent;
+  border-top-color: inherit;
+}
+.wojo.left.corner.label .icon {
+  left: -0.78571429em;
+}
+.wojo.segment > .wojo.corner.label {
+  top: -1px;
+  right: -1px;
+}
+.wojo.segment > .wojo.left.corner.label {
+  right: auto;
+  left: -1px;
+}
+/* == Ribbon == */
+.wojo.ribbon.label {
+  position: relative;
+  margin: 0em;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  border-radius: 0em 0.188rem 0.188rem 0em;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.wojo.ribbon.label:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0%;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0em 1.2em 1.2em 0em;
+  border-color: transparent;
+  border-right-color: inherit;
+  width: 0em;
+  height: 0em;
+}
+.wojo.ribbon.label {
+  left: calc( -1rem - 1.2em );
+  margin-right: -1.2em;
+  padding-left: calc( 1rem + 1.2em );
+  padding-right: 1.2em;
+}
+.wojo[class*="right ribbon"].label {
+  left: calc(100% + 1rem + 1.2em );
+  padding-left: 1.2em;
+  padding-right: calc( 1rem + 1.2em );
+}
+.wojo[class*="right ribbon"].label {
+  text-align: left;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  border-radius: 0.188rem 0em 0em 0.188rem;
+}
+.wojo[class*="right ribbon"].label:after {
+  left: auto;
+  right: 0%;
+  border-style: solid;
+  border-width: 1.2em 1.2em 0em 0em;
+  border-color: transparent;
+  border-top-color: inherit;
+}
+.wojo.image > .ribbon.label,
+.wojo.card .image > .ribbon.label {
+  position: absolute;
+  top: 1rem;
+}
+.wojo.card .image > .wojo.ribbon.label,
+.wojo.image > .wojo.ribbon.label {
+  left: calc( 0.05rem - 1.2em );
+}
+.wojo.card .image > .wojo[class*="right ribbon"].label,
+.wojo.image > .wojo[class*="right ribbon"].label {
+ left: calc(100% + -0.05rem + 1.2em );
+  padding-left: 0.750em;
+}
+.wojo.table td > .wojo.ribbon.label {
+  left: calc( -0.625em - 1.2em );
+}
+.wojo.table td > .wojo[class*="right ribbon"].label {
+  left: calc(100% + 0.625em + 1.2em );
+  padding-left: 0.750em;
+}
+/* == Attached == */
+.wojo.top.attached.label,
+.wojo.attached.label {
+  width: 100%;
+  position: absolute;
+  margin: 0em;
+  top: 0em;
+  left: 0em;
+  padding: 0.75em 1em;
+  border-radius: 0.188rem 0.188rem 0em 0em;
+}
+.wojo.bottom.attached.label {
+  top: auto;
+  bottom: 0em;
+  border-radius: 0em 0em 0.188rem 0.188rem;
+}
+.wojo.top.left.attached.label {
+  width: auto;
+  margin-top: 0em;
+  border-radius: 0.188rem 0em 0.188rem 0em;
+}
+.wojo.top.right.attached.label {
+  width: auto;
+  left: auto;
+  right: 0em;
+  border-radius: 0em 0.188rem 0em 0.188rem;
+}
+.wojo.bottom.left.attached.label {
+  width: auto;
+  top: auto;
+  bottom: 0em;
+  border-radius: 0em 0.188rem 0em 0.188rem;
+}
+.wojo.bottom.right.attached.label {
+  top: auto;
+  bottom: 0em;
+  left: auto;
+  right: 0em;
+  width: auto;
+  border-radius: 0.188rem 0em 0.188rem 0em;
+}
+/* == States == */
+.wojo.label.disabled {
+  opacity: 0.5;
+}
+a.wojo.labels .label:hover,
+a.wojo.label:hover {
+  background-color: #EBEBEB;
+  border-color: #EBEBEB;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.wojo.labels a.label:hover:before,
+a.wojo.label:hover:before {
+  color: rgba(0, 0, 0, 0.8);
+}
+.wojo.active.label {
+  background-color: #E1E1E1;
+  border-color: #E1E1E1;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.95);
+}
+.wojo.active.label:before {
+  background-color: #E1E1E1;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.95);
+}
+a.wojo.labels .active.label:hover,
+a.wojo.active.label:hover {
+  background-color: #C8C8C8;
+  border-color: #C8C8C8;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.95);
+}
+.wojo.labels a.active.label:ActiveHover:before, a.wojo.active.label:ActiveHover:before {
+ background-color: #C8C8C8;
+ background-image: none;
+ color: rgba(0, 0, 0, 0.95);
+}
+.wojo.labels.visible .label,
+.wojo.label.visible {
+  display: inline-block !important;
+}
+.wojo.labels.hidden .label,
+.wojo.label.hidden {
+  display: none !important;
+}
+/* == Colors == */
+.wojo.black.labels .label,
+.wojo.black.label {
+  background-color: #566278;
+  border-color: #566278;
+  color: #FFFFFF;
+}
+.wojo.black.labels .label:hover,
+a.wojo.black.label:hover {
+  background-color: #27292a;
+  border-color: #27292a;
+  color: #FFFFFF;
+}
+.wojo.black.corner.label,
+.wojo.black.corner.label:hover {
+  background-color: transparent;
+}
+.wojo.black.ribbon.label {
+  border-color: #2f3032;
+}
+.wojo.basic.black.label {
+  background-color: #FFFFFF;
+  color: #566278;
+  border-color: #566278;
+}
+.wojo.basic.black.labels a.label:hover,
+a.wojo.basic.black.label:hover {
+  background-color: #FFFFFF;
+  color: #27292a;
+  border-color: #27292a;
+}
+.wojo.primary.labels .label,
+.wojo.primary.label {
+  background-color: #41C7F9;
+  border-color: #41C7F9;
+  color: #FFFFFF;
+}
+.wojo.primary.labels .label:hover,
+a.wojo.primary.label:hover {
+  background-color: #35B1E2;
+  border-color: #35B1E2;
+  color: #FFFFFF;
+}
+.wojo.primary.corner.label,
+.wojo.primary.corner.label:hover {
+  background-color: transparent;
+}
+.wojo.primary.ribbon.label {
+  border-color: #309FCF;
+}
+.wojo.basic.primary.label {
+  background-color: #FFFFFF;
+  color: #41C7F9;
+  border-color: #41C7F9;
+}
+.wojo.basic.primary.labels a.label:hover,
+a.wojo.basic.primary.label:hover {
+  background-color: #FFFFFF;
+  color: #35B1E2;
+  border-color: #35B1E2;
+}
+.wojo.secondary.labels .label,
+.wojo.secondary.label {
+  background-color: #2CBEBF;
+  border-color: #2CBEBF;
+  color: #FFFFFF;
+}
+.wojo.secondary.labels .label:hover,
+a.wojo.secondary.label:hover {
+  background-color: #00acc1;
+  border-color: #00acc1;
+  color: #FFFFFF;
+}
+.wojo.secondary.corner.label,
+.wojo.secondary.corner.label:hover {
+  background-color: transparent;
+}
+.wojo.secondary.ribbon.label {
+  border-color: #0097a7;
+}
+.wojo.basic.secondary.label {
+  background-color: #FFFFFF;
+  color: #2CBEBF;
+  border-color: #2CBEBF;
+}
+.wojo.basic.secondary.labels a.label:hover,
+a.wojo.basic.secondary.label:hover {
+  background-color: #FFFFFF;
+  color: #00acc1;
+  border-color: #00acc1;
+}
+.wojo.positive.labels .label,
+.wojo.positive.label {
+  background-color: #3FC59D;
+  border-color: #3FC59D;
+  color: #FFFFFF;
+}
+.wojo.positive.labels .label:hover,
+a.wojo.positive.label:hover {
+  background-color: #38B491;
+  border-color: #38B491;
+  color: #FFFFFF;
+}
+.wojo.positive.corner.label,
+.wojo.positive.corner.label:hover {
+  background-color: transparent;
+}
+.wojo.positive.ribbon.label {
+  border-color: #3FC59D;
+}
+.wojo.basic.positive.label {
+  background-color: #FFFFFF;
+  color: #3FC59D;
+  border-color: #3FC59D;
+}
+.wojo.basic.positive.labels a.label:hover,
+a.wojo.basic.positive.label:hover {
+  background-color: #FFFFFF;
+  color: #38B491;
+  border-color: #38B491;
+}
+.wojo.negative.labels .label,
+.wojo.negative.label {
+  background-color: #E2747E;
+  border-color: #E2747E;
+  color: #FFFFFF;
+}
+.wojo.negative.labels .label:hover,
+a.wojo.negative.label:hover {
+  background-color: #C86671;
+  border-color: #C86671;
+  color: #FFFFFF;
+}
+.wojo.negative.corner.label,
+.wojo.negative.corner.label:hover {
+  background-color: transparent;
+}
+.wojo.negative.ribbon.label {
+  border-color: #E2747E;
+}
+.wojo.basic.negative.label {
+  background-color: #FFFFFF;
+  color: #E2747E;
+  border-color: #E2747E;
+}
+.wojo.basic.negative.labels a.label:hover,
+a.wojo.basic.negative.label:hover {
+  background-color: #FFFFFF;
+  color: #C86671;
+  border-color: #C86671;
+}
+/* == Basic == */
+.wojo.basic.label {
+  background: none #FFFFFF;
+  border: 1px solid #dddddd;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
+}
+a.wojo.basic.label:hover {
+  text-decoration: none;
+  background: none #FFFFFF;
+  color: #1e70bf;
+  box-shadow: 1px solid #dddddd;
+  box-shadow: none;
+}
+.wojo.basic.pointing.label:before {
+  border-color: inherit;
+}
+/* == Simple == */
+.wojo.simple.label {
+  background: transparent;
+  border: 0;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
+}
+
+/* == Highlited == */
+.wojo.highlited.label,
+.wojo.highlited.label:hover {
+  background-color: #fff9c4;
+}
+/* == Dimmed == */
+.wojo.dimmed.label,
+.wojo.dimmed.label:hover {
+  background-color: rgba(255,255,255,0.3);
+  color:#fff
+}
+.wojo.very.dimmed.label,
+.wojo.very.dimmed.label:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+/* == Fluid == */
+.wojo.label.fluid,
+.wojo.fluid.labels > .label {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* == Empty == */
+.wojo.empty.labels .label,
+.wojo.empty.label {
+  padding: .75em;
+  line-height: 1em;
+  text-align: center;
+}
+/* == Circular == */
+.wojo.circular.labels .label,
+.wojo.circular.label {
+  min-width: 2em;
+  min-height: 2em;
+  padding: 0.5em;
+  line-height: 1em;
+  text-align: center;
+  border-radius: 500rem;
+}
+.wojo.empty.circular.labels .label,
+.wojo.empty.circular.label {
+  min-width: 0em;
+  min-height: 0em;
+  overflow: hidden;
+  width: 0.5em;
+  height: 0.5em;
+  vertical-align: baseline;
+}
+.wojo.initials.circular.labels .label,
+.wojo.initials.circular.label {
+  min-width: 1.750rem;
+  min-height: 1.750rem;
+  width: 1.750rem;
+  height: 1.750rem;
+  padding:0;
+  line-height: 1.750rem;
+  font-size:.750rem;
+  vertical-align: baseline;
+}
+/* == Pointing == */
+.wojo.pointing.label {
+  position: relative;
+}
+.wojo.attached.pointing.label {
+  position: absolute;
+}
+.wojo.pointing.label:before {
+  background-color: inherit;
+  background-image: inherit;
+  border-width: none;
+  border-style: solid;
+  border-color: inherit;
+}
+.wojo.pointing.label:before {
+  position: absolute;
+  content: '';
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-image: none;
+  z-index: 2;
+  width: 0.6666em;
+  height: 0.6666em;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+.wojo.pointing.label,
+.wojo[class*="pointing above"].label {
+  margin-top: 1em;
+}
+.wojo.pointing.label:before,
+.wojo[class*="pointing above"].label:before {
+  border-width: 1px 0px 0px 1px;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  top: 0%;
+  left: 50%;
+}
+.wojo[class*="bottom pointing"].label,
+.wojo[class*="pointing below"].label {
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+.wojo[class*="bottom pointing"].label:before,
+.wojo[class*="pointing below"].label:before {
+  border-width: 0px 1px 1px 0px;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  top: 100%;
+  left: 50%;
+}
+.wojo[class*="left pointing"].label {
+  margin-top: 0em;
+  margin-left: 0.6666em;
+}
+.wojo[class*="left pointing"].label:before {
+  border-width: 0px 0px 1px 1px;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  bottom: auto;
+  right: auto;
+  top: 50%;
+  left: 0em;
+}
+.wojo[class*="right pointing"].label {
+  margin-top: 0em;
+  margin-right: 0.6666em;
+}
+.wojo[class*="right pointing"].label:before {
+  border-width: 1px 1px 0px 0px;
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
+  top: 50%;
+  right: 0%;
+  bottom: auto;
+  left: auto;
+}
+/* == Basic Pointing == */
+.wojo.basic.pointing.label:before,
+.wojo.basic[class*="pointing above"].label:before {
+  margin-top: -1px;
+}
+.wojo.basic[class*="bottom pointing"].label:before,
+.wojo.basic[class*="pointing below"].label:before {
+  bottom: auto;
+  top: 100%;
+  margin-top: 1px;
+}
+.wojo.basic[class*="left pointing"].label:before {
+  top: 50%;
+  left: -1px;
+}
+.wojo.basic[class*="right pointing"].label:before {
+  top: 50%;
+  right: -1px;
+}
+/* == Floating Label == */
+.wojo.floating.label {
+  position: absolute;
+  z-index: 100;
+  top: -1em;
+  left: 100%;
+  margin: 0em 0em 0em -1.5em;
+}
+/* == Sizes == */
+.wojo.fitted.label {
+	padding:0
+}
+.wojo.fitted.label > .icon {
+  width: auto;
+  margin:0;
+}
+.wojo.mini.labels .label,
+.wojo.mini.label {
+  font-size: 0.625rem;
+}
+.wojo.tiny.labels .label,
+.wojo.tiny.label {
+  font-size: 0.688rem;
+}
+.wojo.small.labels .label,
+.wojo.small.label {
+  font-size: 0.750rem;
+  font-family: 'mavenProBold';
+}
+.wojo.labels .label,
+.wojo.label {
+  font-size: 0.875rem;
+}
+.wojo.large.labels .label,
+.wojo.large.label {
+  font-size: 1rem;
+}
+.wojo.big.labels .label,
+.wojo.big.label {
+  font-size: 1.063rem;
+}
+.wojo.huge.labels .label,
+.wojo.huge.label {
+  font-size: 1.125rem;
+}
+.wojo.massive.labels .label,
+.wojo.massive.label {
+  font-size: 1.5rem;
+}
+.wojo.gigantic.labels .label,
+.wojo.gigantic.label {
+  font-size: 2.5rem;
+}
