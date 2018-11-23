@@ -74,7 +74,7 @@
 		  }
 		  
 		  print json_encode($json);
-      }
+	  }
 	  
       /**
        * FrontController::Registration()

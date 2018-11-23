@@ -13,7 +13,7 @@
   $action = Validator::post('action');
 
   /* == Actions == */
-  switch ($action):
+  switch ($action):   
       /* == Admin Password Reset == */
       case "aResetPass":
           App::AdminController()->passReset();

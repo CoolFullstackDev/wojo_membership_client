@@ -177,4 +177,4 @@
 	  $tpl->segments = $router->segments;
       echo $tpl->render(); 
   });
- 
+
